@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>internship_design2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            background-color: rgb(14, 14, 85);
+            justify-content: center;
+        }
+
+        .navbar div:hover {
+            background-color: rgb(184, 36, 36)
+        }
+
+        .item {
+            color: white;
+            padding: 30px 30px;
+        }
+
+        #item-1 {
+            background-color: white;
+            flex-grow: 2;
+            color: black;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .material-icons {
+            color: white;
+            padding: 30px 30px;
+        }
+
+        .container {
+
+            color: white;
+            background-color: rgb(22, 22, 66);
+            padding: 64px 150px;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        .container h1 {
+            font-size: 46px;
+            font-family: "Arial";
+        }
+
+        .container p {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+
+        }
+
+        #button {
+            background-color: rgb(184, 36, 36);
+            padding: 13px 2px;
+            width: 93px;
+            color: white;
+            margin-top: 33px;
+            border: none;
+        }
+        #button:hover{
+            background-color: rgb(109, 21, 21);
+        }
+
+        .search {
+            width: 100%;
+            margin: 2px 0px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            margin-top: 40px;
+        }
+
+        .search i {
+            color: black;
+            font-size: 20px;
+            margin: 10px 10px
+        }
+
+        #search {
+            color: black;
+            margin: 23px -25px;
+            margin-right: 400px;
+        }
+
+        .search select {
+            display: flex;
+            padding: 10px 52px;
+            margin-left: 10px;
+            text-align: right;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 400px 400px 200px;
+            grid-gap: 2rem;
+            justify-content: center;
+            /*grid-templates-colums:repeat(3,4fr)*/
+
+        }
+
+        .contents {
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            background-image: url("twoengi.jpeg");
+            background-size: 142%;
+            background-repeat: no-repeat;
+            margin: 15px;
+            padding: 115px 100px;
+            border: 2px solid black;
+
+        }
+
+        /*.contents p {
+            position: relative;
+            font-size: 15px;
+            top: 122px;
+            right: 10px;
+            left: -76px;
+        }*/
+        #para{
+            position: relative;
+            font-size: 15px;
+            top: 122px;
+            right: 10px;
+            left: -76px;
+        }
+
+        .contents button {
+            position: relative;
+            top: 50px;
+            left: 118px;
+        }
+
+        #gridbutton {
+            position: relative;
+            left: 763px;
+        }
+
+        #button1 {
+            background-color: rgb(184, 36, 36);
+            padding: 13px 2px;
+            width: 93px;
+            color: white;
+            margin-top: 33px;
+            border: none
+        }
+
+        .why {
+            background-color: rgb(22, 22, 66);
+            color: white;
+        }
+
+        .why h1 {
+            padding: 78px;
+            font-weight: bolder;
+            font-family: "Arial";
+            text-align: center;
+        }
+
+        .why span {
+            font-family: "Sanasoft Arial Outline.kz"
+        }
+
+        .images {
+            display: flex;
+            margin: -27px 50px;
+            justify-content: center;
+            padding: 10px 10px;
+        }
+
+        .images img {
+            padding: 0px 20px;
+        }
+
+        .captions {
+            display: flex;
+            margin: 10px 10px;
+            padding: 71px;
+            justify-content: center;
+        }
+
+        .captions div {
+            padding: 0px 97px;
+            font-size: 26px;
+            color: whitesmoke;
+        }
+
+        .verify {
+            display: flex;
+            background-color: rgb(131, 131, 253);
+            color: white;
+            padding: 10px 10px;
+            margin-top: -10px;
+        }
+
+        .verifyy div {
+            padding: 16px 120px;
+        }
+
+        .verifyy h2 {
+            font-size: 50px;
+        }
+
+        .emailverify button {
+            margin: 0px 253px;
+            margin-top: 10px;
+            margin-right: 100px;
+        }
+
+        .emailverify {
+            display: flex;
+            padding: 10px 10px;
+        }
+
+        #email {
+            margin: 32px -253px 0px 0px;
+        }
+
+        .footer {
+            background-image: url("footer.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            font-family: "poppins";
+            margin-left: 50px;
+        }
+
+        .footer h2 {
+            line-height: 3;
+        }
+
+        .social {
+            display: flex;
+            justify-content: right;
+            padding: 64px 26px;
+        }
+
+        .social img {
+            padding: 0px 18px;
+        }
+
+        .contact {
+            color: black;
+        }
+
+        .quick {
+            display: flex;
+            color: white;
+            margin: -118px 510px;
+            padding-bottom: 50px;
+        }
+
+        .quick div {
+            padding: 0px 39px;
+            white-space: nowrap;
+        }
+
+        .subscribe p {
+            font-size: 26px;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        #small {
+            font-size: 15px;
+        }
+
+        script {
+            position: realative;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="item" id="item-1">+91 99999 99999</div>
+        <div class="item" id="item-2">ABOUT</div>
+        <div class="item" id="item-4">INDUSTRIES</div>
+        <div class="item" id="item-5">SERVICES</div>
+        <div class="item" id="item-6">PROJECTS</div>
+        <div class="item" id="item-7">TRAININGS</div>
+        <div class="item" id="item-8">CONTACT US</div>
+        <div><i class="material-icons">search</i></div>
+    </nav>
+    <div class=container>
+        Projects<details>
+            <summary>Training1</summary>
+            <h1>Training</h1>
+            <p>Some dicretion is generable about projects for a line or two.Some dicretion is generable about projects
+                for a line or two.Some dicretion is generable about projects for a line or two.</p>
+            </summary>
+            <button type="button" id="button">PRE REGISTER</button>
+        </details>
+        <div class="search">
+            <i class="material-icons">search</i>
+            <input type="search" id="search" placeholder="search" name="search"
+                style="background-color: transparent;border:none">
+            <select id="Industries" style="background-color: transparent;border:none">
+                <option value="Industry">Industry</option>
+                <option value="Industry">def</option>
+                <option value="Industry">abc</option>
+            </select>
+            <select id="Statuss" style="background-color: transparent;border:none">
+                <option value="Status">status</option>
+                <option value="Status">1</option>
+                <option value="Status">2</option>
+            </select>
+            <select id="date" style="background-color: transparent;border:none">
+                <option value="date">Date</option>
+            </select>
+        </div>
+    </div>
+    </div>
+    <div class="grid">
+        <div class="contents" id="add">
+            <p id="para">Hazop Leadership training for engineers</p>
+            <p style="position: relative;top: 120px;right: 75px;font-weight: bold;">PRICE:FREE</b></p><button>PRE-BOOK</button>
+        </div>
+        <div class="contents">
+            <p id="para">Hazop Leadership training for engineers</p>
+            <p style="position: relative;top: 120px;right: 75px;font-weight: bold;">PRICE:FREE</b></p><button>PRE-BOOK</button>
+        </div>
+        <div class="contents">
+            <p id="para">Hazop Leadership training for engineers</p>
+            <p style="position: relative;top: 120px;right: 75px;font-weight: bold;">PRICE:FREE</b></p><button>PRE-BOOK</button>
+        </div>
+        <div class="contents">
+            <p id="para">Hazop Leadership training for engineers</p>
+            <p style="position: relative;top: 120px;right: 75px;font-weight: bold;">PRICE:FREE</b></p><button>PRE-BOOK</button>
+        </div>
+        <div class="contents">
+            <p id="para">Hazop Leadership training for engineers</p>
+            <p style="position: relative;top: 120px;right: 75px;font-weight: bold;">PRICE:FREE</b></p><button>PRE-BOOK</button>
+        </div>
+        <div class="contents">
+            <p id="para">Hazop Leadership training for engineers</p>
+            <p style="position: relative;top: 120px;right: 75px;font-weight: bold;">PRICE:FREE</b></p><button>PRE-BOOK</button>
+        </div>
+    </div>
+    <button type="button" id="gridbutton">SHOW MORE</button>
+    <button type="submit" id="button1" style="position: relative;right: 9px;float: right;top: -60px">ADMIN LOGIN</button>
+    
+   <script>
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                let a = prompt("Enter Admin Id: ", " ");
+                let b = prompt("Enter Password: ", " ");
+                if (a == 'prithvi') {
+                    if (b == '123') {
+                        let name = prompt("Course name: ", " ");
+                        let price = prompt("PRICE: ", " ");
+                        var newgrid;
+                        newgrid = $("<div class='contents'>").append($("<p id='para'>").append(name).append($("<p style='font-weight:bold'>")).append("PRICE:").append(price)).append($("<button style='position:relative;top:100px;left:118px;'>").append("PRE-BOOK"))    
+                        $(".grid").append(newgrid);
+                    }
+        
+                }
+                else
+                    alert("Invalid Credentials");
+            })
+        })
+
+    </script>
+    <div class="why">
+        <h1>Our Added <span>value</span></h1>
+        <div class="images">
+            <img src="bulb.jpeg" alt="global" width="300px">
+            <img src="bulb.jpeg" alt="commitment" width="300px">
+            <img src="bulb.jpeg" alt="partnership" width="300px">
+        </div>
+        <div class="captions">
+            <div>A Global Network</div>
+            <div>Commitment</div>
+            <div>Trusted Partnership</div>
+        </div>
+    </div>
+    <div class="verify">
+        <div class="verifyy">
+            <div>
+                <h2>Verify</h2>
+            </div>
+            <div>Verify yours and your friends certification status and get validated before you hire and apply</div>
+        </div>
+        <div class="emailverify">
+            <input type="email" id="email" placeholder="ENTER EMAIL ID"
+                style="width:288px;height:40px;padding:0px 25px">
+            <span><button type="button" id="button">VERIFY</button></span>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="social">
+            <img src="facebook.png" alt="facebook" width=15px>
+            <img src="instagram.png" alt="Instagram" width=15px>
+            <img src="linkedin.png" alt="linkedin" width=15px>
+            <img src="twitter.png" alt="twitter" width=15px>
+            <img src="youtube.png" alt="youtube" width=15px>
+        </div>
+        <div class="contact">
+            <h2>CONTACT US</h2>
+            <P>WORKING HOURS<br>
+                MON-FRI: 9.00 AM TO 5.00 PM IST</P>
+        </div>
+        <div class="quick">
+            <div class="link">
+                <h2>QUICK LINKS</h2>
+                <p>IFLUIDS<br>
+                    SERVICES<br>
+                    INDUSTRIES<br>
+                    VALUES</p>
+            </div>
+            <div class="company">
+                <h2>COMPANY</h2>
+                <p>ABOUT<br>
+                    PROJECTS<br>
+                    TRAININGS<br>
+                    CAREER</p>
+            </div>
+            <div class="subscribe">
+                <p>Subscribe to receive our daily<br>updates/ projects/ newsletters</p>
+                <input type="email" id="email" placeholder="ENTER EMAIL ID" style="width:248px;height:40px;">
+                <button type="button" id="button" style="width:120px;margin-left:246px">SUBSCRIBE</button>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

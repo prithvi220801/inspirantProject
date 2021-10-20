@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>internship_design1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .navbar{
+            display:flex;
+            background-color: rgb(14, 14, 85);
+            justify-content: center;
+        }
+        .navbar div:hover{
+            background-color:rgb(184, 36, 36)
+        }
+        .navbar a{
+            color:white;
+            text-decoration: none;
+        }
+        .item{
+            color:white;
+            padding:30px 30px;
+        }
+        #item-1{
+            background-color: white;
+            flex-grow: 2;
+            color: black;
+            font-weight:bold;
+            text-align:right;
+        }
+        .material-icons{
+            color:white;
+            padding:30px 30px;
+        }
+        .container{
+        
+            color:white;
+            background-color: rgb(44, 44, 116);
+            padding:64px 150px;
+            display:flex;
+            flex-direction:column;
+            line-height: 1.6;           
+        }
+        .container h2{
+            font-size:48px;
+            font-family: "poppins";
+        }
+        .container h1{
+            font-size:75px;
+            font-family: "Sanasoft Arial Outline.kz";
+        }
+        .container p{
+            font-family:'Work Sans', sans-serif;
+            font-size:17px;
+            font-weight:bold;
+        }
+        #button{
+            background-color: rgb(184, 36, 36);
+            padding:13px 2px;
+            width:93px;
+            color:white;
+            margin-top:33px;
+            border:none
+        }
+        #button:hover{
+            background-color: rgb(105, 23, 23);
+        }
+        .logos{
+            width:110%;
+            margin:2px 2px;
+            padding:13px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            margin-left:-74px;
+            margin-top:40px;
+            margin-right:10px;
+        }
+        .logos h1{
+            color:black;
+            font-size:20px;
+            font-family: "poppins";
+        }
+        .logo{
+            display:flex;
+        }
+        .logo img{
+            padding:20px 84px;
+        }
+        .mission{
+            display:flex;
+            flex-direction:column;
+            text-align: center;
+            background-image:url("Mission.png");
+            background-size:100%;
+            background-repeat: no-repeat;
+            padding: 200px;
+        }
+        .mission h4{
+            font-size: 30px;
+            font-family: 'poppins';
+        }
+        .mission h3{
+            color:rgb(41, 41, 122);
+            font-size: 45px;
+        }
+        .mission p{
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            margin:30px;
+            font-family: 'Poiret One', cursive;
+        }
+        .mission button{
+            margin:0px 509px;
+        }
+        .metals{
+            display:flex;
+            margin-top:-48px;
+        }
+        .li{
+            display:flex;
+            flex-direction: column;
+            color:white;
+            background-color: rgb(17, 17, 88);
+            justify-content:center;
+            text-align: center;
+            font-size: 23px;
+            white-space: nowrap;
+        }
+        .li div{
+            padding:44px 155px;
+            border:1px solid rgb(115, 115, 252);
+        }
+        .li div:hover{
+            background-color: rgb(54, 54, 175);
+        }
+        .details{
+            background-image: url("twoengi.jpeg");
+            background-size:1076px 727px;
+            background-repeat: no-repeat;
+            opacity:0.9;
+            text-align: right;
+            color:white;
+            font-family: "Arial";
+            font-weight:bold;
+        }
+        .details h1,p,button{
+            margin-right:65px;
+        }
+        .details h1{
+            margin-top:400px;
+            font-size:36px;
+        }
+        .details p{
+            margin:18px 68px 9px 209px;
+        }
+        .why{
+            background-color: rgb(140, 140, 252);
+            color:rgb(17, 17, 95)
+        }
+        .why h1{
+            padding:78px;
+            font-weight: bolder;
+            font-family: "Arial";
+            text-align: center;
+        }
+        .why span{
+            font-family:"Sanasoft Arial Outline.kz"
+        }
+        .images{
+            display:flex;
+            margin:-27px 50px;
+            justify-content: center;
+            padding:10px 10px;
+        }
+        .images img{
+            padding:0px 20px;
+        }
+        .captions{
+            display:flex;
+            margin:10px 10px;
+            padding:71px; 
+            justify-content: center;
+        }
+        .captions div{
+            padding:0px 97px;
+            font-size: 26px;
+            color:rgb(55, 55, 114);
+        }
+        .news{
+            display:flex;
+            flex-direction: column;
+            margin:10px 40px;
+            padding:20px;
+            font-family: "arial";
+        }
+        .news h1{
+            color:rgb(187, 59, 59);
+            font-weight: bold;
+            font-size: 35px;
+        }
+        .imag{
+            display: flex;
+            justify-content: center;
+        }
+        .imag img{
+            padding:87px 25px;
+        }
+        .date{
+            display:flex;
+        }
+        .date div{
+            display:flex;
+            margin-top: -61px;
+            margin-right:74px;
+            padding:5px 21px;
+            font-size:20px;
+            font-family: 'Poppins', sans-serif;
+            color:rgb(73, 74, 116);
+        }
+        .border{
+            border-bottom: 3px solid rgb(21, 21, 94);
+        }
+        .enquiry{
+            display: flex;
+            background-color: rgb(131, 131, 253);
+            color:white;
+            padding:10px 10px;
+        }
+        .enquiry div{
+            padding:52px 120px;
+        }
+        .enquiry h1{
+            font-size:50px;
+        }
+        .enquiry button{
+            margin:0px 448px;
+            margin-top: 10px;
+            margin-right: 100px;
+        }
+        .footer{
+            background-image: url("footer.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            font-family: "poppins";
+            margin-left: 50px;
+        }
+        .footer h2{
+            line-height: 3;
+        }
+        .social{
+            display: flex;
+            justify-content: right;
+            padding:64px 26px;
+        }
+        .social img{
+            padding:0px 18px;
+        }
+        .contact{
+            color:black;
+        }
+        .quick{
+            display:flex;
+            color:white;
+            margin:-118px 510px;
+            padding-bottom: 50px;
+        }
+        .quick div{
+            padding:0px 39px;
+            white-space:nowrap;
+        }
+        .subscribe p{
+            font-size: 26px;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        #small{
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+            <div class="item" id="item-1">+91 99999 99999</div>
+            <div class="item" id="item-2">ABOUT</div>
+            <div class="item" id="item-4">INDUSTRIES</div>
+            <div class="item" id="item-5">SERVICES</div>
+            <div class="item" id="item-6">PROJECTS</div>
+            <div class="item" id="item-7"><a href="prodes2.html">TRAININGS</a></div>
+            <div class="item" id="item-8">CONTACT US</div>
+            <div><i class="material-icons">search</i></div>
+    </nav>
+    <div class=container>
+        <h2>We build Engineering Practices</h2>
+        <h1>of the future</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Nunc odio in et, lectus sit lorem id integer.</p>
+        <button type="button" id="button">PROJECTS</button>
+        <div class="logos">
+            <h1>We serve global leaders</h1>
+            <div class="logo">
+                <img src="indianoil.png" width="98px">
+                <img src="Bharat-Petroleum-Logo-PNG.png" width="70px">
+                <img src="Hindustan-Petroleum-Logo-PNG.png" width="70px">
+                <img src="Gail.png" width="98px">
+            </div>
+        </div>
+    </div>
+    <div class="mission">
+        <h4>MISSION</h4>
+        <h3>We believe in purpose</h3>
+        <p>Ifluids Informatoin Ifluids Informatoin InformatoinIfluids InformatoinIfluids<br>InformatoinIfluids InformatoinIfluids InformatoinIfluids InformatoinIfluids InformatoinIfluids<br>InformatoinIfluids InformatoinIfluids InformatoinIfluids InformatoinIfluids Informatoin </p>
+        <button type="button" id="button">ABOUT US</button>
+    </div>
+    <div class="metals">
+        <div class="li">
+            <div >Oil & Gas</div>
+            <div >Petrochemical</div>
+            <div >Energy</div>
+            <div >Fertilizer</div>
+            <div >Metals & Minerals</div>
+            <div >Others</div>
+        </div>
+        <div class="details">
+            <h1>Metals & Minerals</h1>
+            <p>We present here just a few examples of our most recent projects,to show the diversity of our clients and partners, and of the projects we do with them. Due to the nature of our work we can not always share the details of the projects.</p>
+            <button type="button" id="button" style="padding:20px 10px;white-space: nowrap;">READ MORE</button>
+        </div>
+    </div>
+    <div class="why">
+        <h1>Why <span>us</span></h1>
+        <div class="images">
+            <img src="bulb.jpeg" alt="global" width="300px" >
+            <img src="bulb.jpeg" alt="commitment"width="300px">
+            <img src="bulb.jpeg" alt="partnership" width="300px">
+        </div>
+        <div class="captions">
+                <div>A Global Network</div>
+                <div>Commitment</div>
+                <div>Trusted Partnership</div>
+        </div>
+    </div>
+    <div class="news">
+        <h3>People talk us in</h3>
+        <h1>News and Media</h1>
+        <div class="imag">
+            <img src="The-Washington-Post.webp" alt="newspaper" width=350px>
+            <img src="iFluids-Youtube-Thumbnail-1.png" alt="ifluids" width=450px>
+            <img src="twoengi.jpeg" alt="engi" width=450px>
+        </div>
+        <div class="date">
+            <div class="border">DATE:XXX YYY ZZZ<br>
+            Project description 2 lines Project description 2 lines</div>
+            
+            <div class="border">DATE:XXX YYY ZZZ<br>
+            Project description 2 lines Project description 2 lines</div>
+            
+            <div class="border">DATE:XXX YYY ZZZ<br>
+            Project description 2 lines Project description 2 lines</div>
+        </div>
+    </div> 
+    <div class="enquiry">
+        <div><h1>Have a project?</h1></div>
+        <div><button type="button" id="button" style="white-space: nowrap;width:115px;">ENQUIRY FORM</button></div>
+    </div> 
+    <div class="footer">
+        <div class="social">
+            <img src="facebook.png" alt="facebook" width=15px>
+            <img src="instagram.png" alt="Instagram" width=15px>
+            <img src="linkedin.png" alt="linkedin" width=15px>
+            <img src="twitter.png" alt="twitter" width=15px>
+            <img src="youtube.png" alt="youtube" width=15px>
+        </div>
+        <div class="contact" >
+            <h2>CONTACT US</h2>
+            <P>WORKING HOURS<br>
+            MON-FRI: 9.00 AM TO 5.00 PM IST</P>
+        </div>
+        <div class="quick">
+            <div class="link">
+                <h2>QUICK LINKS</h2>
+                <p>IFLUIDS<br>
+                SERVICES<br>
+                INDUSTRIES<br>
+                VALUES</p>
+            </div>
+            <div class="company">
+                <h2>COMPANY</h2>
+                <p>ABOUT<br>
+                PROJECTS<br>
+                TRAININGS<br>
+                CAREER</p>
+            </div>
+            <div class="subscribe">
+                <p>Subscribe to receive our daily<br>updates/ projects/ newsletters</p>
+                <input type="email" id="email" placeholder="ENTER EMAIL ID" style="width:248px;height:40px;">
+                <button type="button" id="button" style="width:120px;">SUBSCRIBE</button>
+                <p id="small">*Error in entered Email Id</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
